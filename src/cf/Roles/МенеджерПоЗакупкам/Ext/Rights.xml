@@ -605,58 +605,14 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.Продажи.StandardAttribute.Active</name>
+		<name>AccumulationRegister.Продажи</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.StandardAttribute.LineNumber</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.StandardAttribute.Recorder</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.Dimension.Товар</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1360,17 +1316,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.Продажи.Dimension.Покупатель</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.ИсходящиеПисьма</name>
 		<right>
 			<name>Read</name>
@@ -1824,17 +1769,6 @@
 		<right>
 			<name>View</name>
 			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.Resource.Количество</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
 		</right>
 	</object>
 	<object>
@@ -2744,17 +2678,6 @@
 	</object>
 	<object>
 		<name>Document.РасходТовара.TabularSection.Товары.Attribute.Товар</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.Продажи.Resource.Сумма</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
 		<right>
 			<name>Edit</name>
 			<value>false</value>
