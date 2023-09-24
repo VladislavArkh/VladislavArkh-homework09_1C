@@ -375,6 +375,7 @@
 			<CommonModule>УведомленияСервер</CommonModule>
 			<CommonModule>отус_РаботаСЗаказами</CommonModule>
 			<CommonModule>отус_ТекущиеПользователи</CommonModule>
+			<CommonModule>отус_ОбщегоНазначения</CommonModule>
 			<ExchangePlan>Мобильные</ExchangePlan>
 			<XDTOPackage>ОбменСМобильнымУстройством</XDTOPackage>
 			<WebService>MAExchange</WebService>
