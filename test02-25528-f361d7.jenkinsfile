@@ -1,0 +1,66 @@
+@Library('1c-utils')
+
+import io.libs.v8_utils
+
+utils = new v8_utils()
+
+database = env.database
+server1c = env.server1c
+
+pipeline {
+    agent { label 'localhost' }
+    stages {
+        stage('Checkout GIT, basic') {
+            steps {
+                script {
+                    git branch: 'storage_1c', credentialsId: 'token_new', url: 'https://gitflic.ru/project/sergeyksk/1c-otus-fork2.git'
+                }
+            }
+        }
+
+        stage('Build CF') {
+                steps {
+                    script {
+                        utils.buildCF()
+                    }
+                }
+        }
+
+        stage('Update DB') {
+                steps {
+                    script {
+                    utils.updatedb()
+                    }
+                }
+        }
+
+        stage('Запуск сценарных тестов') {
+            steps {
+                script {
+                    returnCode = utils.cmd("vrunner vanessa --ibconnection \"/S${server1c}\\${database}\" --db-user \"Admin\" --db-pwd \"123\"")
+                }
+            }
+        }
+
+        stage('Формируем отчет Allure') {
+                steps {
+                    allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'build/reports/allurereport/БСП']]
+                ])
+                }
+        }
+    }
+
+    post {
+        success {
+            script {
+                messageText = 'Успешно. '
+                echo messageText
+            }
+        }
+    }
+}
